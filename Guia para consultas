@@ -1,2 +1,4 @@
 Usaremos o método .value_counts() para contar quantas vezes cada valor do Dataframe aparece
+ex.: frequencia_clientes = vendas_df['E-mail do Cliente'].value_counts()
+
 Usaremos o método .plot() para exibir um gráfico
