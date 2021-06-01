@@ -1,0 +1,2 @@
+Usaremos o método .value_counts() para contar quantas vezes cada valor do Dataframe aparece
+Usaremos o método .plot() para exibir um gráfico
