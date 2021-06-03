@@ -5,3 +5,17 @@ ex.: frequencia_clientes = vendas_df['E-mail do Cliente'].value_counts()
 
 Usaremos o método .plot() para exibir um gráfico
 frequencia_clientes[:5].plot(figsize=(15,5))
+
+-----------------------------------------------------------------------------------------------
+##Modificando coluna##
+#transformar um texto em uma data 
+vendas_df['Data da Venda'] = pd.to_datetime(vendas_df['Data da Venda'], format='%d/%m/%Y')
+
+##Acrescentando colunas##
+#para extrair ano da venda, semelhante ao dicionário, se nao acha aquela coluna ele a cria
+vendas_df['Ano da Venda'] = vendas_df['Data da Venda'].dt.year
+
+#para extrair mês a venda
+vendas_df['Mes da Venda'] = vendas_df['Data da Venda'].dt.month
+display(vendas_df)
+vendas_df.info()
