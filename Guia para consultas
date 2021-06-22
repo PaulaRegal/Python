@@ -19,3 +19,17 @@ vendas_df['Ano da Venda'] = vendas_df['Data da Venda'].dt.year
 vendas_df['Mes da Venda'] = vendas_df['Data da Venda'].dt.month
 display(vendas_df)
 vendas_df.info()
+
+-------------------------------------------------------------------------------------------------
+#barra de progresso, inicia ela numa variavel e dentro do for vc da .update():
+
+from tqdm import tqdm
+
+pbar = tqdm(total=len(vendas_df['ID Loja']), position=0, leave=True)
+
+for i, id_loja in enumerate(vendas_df['ID Loja']):
+    pbar.update()
+    if id_loja == 222:
+        vendas_df.loc[i, 'Quantidade Devolvida'] += 1
+
+display(vendas_df)
