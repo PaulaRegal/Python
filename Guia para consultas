@@ -20,6 +20,9 @@ vendas_df['Mes da Venda'] = vendas_df['Data da Venda'].dt.month
 display(vendas_df)
 vendas_df.info()
 
+#retirar colunas da tabela funcionarios
+funcionarios_df = funcionarios_df.drop(['Estado Civil', 'Cargo'], axis=1)
+
 -------------------------------------------------------------------------------------------------
 #barra de progresso, inicia ela numa variavel e dentro do for vc da .update():
 
