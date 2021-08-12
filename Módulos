@@ -8,3 +8,9 @@ time.time()  # medir o tempo que uma ação leva para ser concluida
 time.sleep() # faz o código esperar alguns segundos (muito útil quando temos que esperar um programa ou uma página carregar)
 
 
+Módulo collections:
+from collections import Counter # descobrir o ranking. Abaixo exemplo:
+vendas_tecnologia = {'notebook asus': 2450, 'iphone': 15000, 'samsung galaxy': 12000, 'tv samsung': 10000, 'ps5': 14300, 'tablet': 1720, 'notebook dell': 17000, 'ipad': 1000, 'tv philco': 2500, 'notebook hp': 1000}
+aux = Counter(vendas_tecnologia) # aux é uma variavel e vou atribuir o dic a ela
+print(aux.most_common(5)) # 5 elementos que mais aparecem
+[('notebook dell', 17000), ('iphone', 15000), ('ps5', 14300), ('samsung galaxy', 12000), ('tv samsung', 10000)]
