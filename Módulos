@@ -5,4 +5,6 @@ time.ctime() # retorna a data do dia em string por ex.: Thu Aug 12 16:48:55 2021
 
 time.time()  # medir o tempo que uma ação leva para ser concluida
 
+time.sleep() # faz o código esperar alguns segundos (muito útil quando temos que esperar um programa ou uma página carregar)
+
 
