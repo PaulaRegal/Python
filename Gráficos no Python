@@ -1,0 +1,15 @@
+Usaremos o módulo Matplotlib.pyplot, que é o módulo mais usado no Python. Existem outros, como o Seaborn e o Plotly, caso queira ver/usar
+
+vendas_meses = [1500, 1727, 1350, 999, 1050, 1027, 1022, 1500, 2000, 2362, 2100, 2762]
+meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
+
+#plotar o gráfico da forma mais simples
+# site para consulta        https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+import matplotlib.pyplot as plt
+
+plt.plot(meses, vendas_meses) #coloco as duas listas para colocar o nome correto nos meses
+plt.ylabel('Vendas')
+plt.xlabel('Meses')
+plt.axis([0, 12, 0, max(vendas_meses)+500])#axis significa eixo, vc tem que passar uma lista com min do eixo x e o max do eixo x, faz a mesma coisa para eixo y
+#coloquei mais 500 para ter uma distancia do final do eixo y 
+plt.show()
