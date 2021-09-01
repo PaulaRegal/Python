@@ -26,3 +26,22 @@ print(preco_imposto(100))
 #lambda expressions para criar uma função que calcula o preço dos produtos acrescido do imposto
 preco_imposto2 = lambda preco: preco * (1.0 + imposto) # pode ser 0.3 ao inves de imposto
 print(preco_imposto2(100))
+
+
+contador_letras = lambda lista: [len(x) for x in lista]
+lista_animais = ['cachorro', 'gato', 'elefante']
+print(contador_letras(lista_animais))
+
+calculadora = {
+    'soma': lambda a,b: a + b,
+    'subtracao': lambda a,b: a - b,
+    'multiplicacao': lambda a,b: a * b,
+    'divisao': lambda a,b: a / b,
+}
+
+print(type(calculadora))
+soma = calculadora['soma']
+multiplicacao = calculadora['multiplicacao']
+print('A soma é: {}'.format(soma(10, 5)))
+print('A multiplicação é: {}'.format(multiplicacao(10, 2)))
+
